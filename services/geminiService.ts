@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import { Message, TarotCard } from '../types';
 import { SENSORY_TASKS } from '../constants';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+const ai = new GoogleGenerativeAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
 
 const MODEL_NAME = 'gemini-3-flash-preview';
 
